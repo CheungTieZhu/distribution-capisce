@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.capisce.implement.dao.UserDao">
+    <insert id="insert" parameterType="com.capisce.entity.UserInfoEntity">
+        insert capisce_user_account_info set userName = #{userName} , password = #{password}, account = #{account},updateTime =now(),createTime = now()
+    </insert>
+</mapper>

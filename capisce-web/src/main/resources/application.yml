@@ -1,0 +1,15 @@
+server:
+  port: 8787
+  servlet:
+    context-path: /capisce-web
+dubbo:
+  application:
+    name: capisce-web
+  registry:
+    address: zookeeper://127.0.0.1:20181
+  scan: com.capisce
+spring:
+  application:
+    name: capisce-web
+  main:
+    allow-bean-definition-overriding: true

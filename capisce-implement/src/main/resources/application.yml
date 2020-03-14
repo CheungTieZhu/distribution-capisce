@@ -1,0 +1,33 @@
+server:
+  port: 8788
+
+mybatis:
+  type-aliases-package: com.capisce.model.*
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+
+spring:
+  application:
+    name: capisce-implement
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://47.101.65.40:3306/capisce
+    username: zxb1994
+    password: 15280570137com
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+  main:
+    allow-bean-definition-overriding: true
+
+dubbo:
+  application:
+    name: capisce-implement
+  registry:
+    address: zookeeper://47.101.65.40:21810
+  protocol:
+    name: dubbo
+    port: 20880
+    host: 47.101.65.40
