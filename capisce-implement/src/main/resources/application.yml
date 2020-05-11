@@ -26,8 +26,8 @@ dubbo:
   application:
     name: capisce-implement
   registry:
-    address: zookeeper://47.101.65.40:21810
+    address: zookeeper://127.0.0.1:20181
   protocol:
     name: dubbo
     port: 20880
-    host: 47.101.65.40
+    host: 127.0.0.1
