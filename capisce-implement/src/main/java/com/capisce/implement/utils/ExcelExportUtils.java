@@ -125,7 +125,7 @@ public class ExcelExportUtils {
     public static void main(String[] args) {
         Workbook wb =null;
         List<ExcelInfoEntity> list = null;
-        String filePath = "D:\\中城拉取电子签约文件数据-0511(1).xlsx";
+        String filePath = "D:\\报表-中城拉取电子签约文件数据-20200512.xlsx";
         wb = readExcel(filePath);
         //遍历解析出来的list
         list = convertExcelToList(wb);

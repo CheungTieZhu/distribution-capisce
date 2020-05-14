@@ -37,7 +37,7 @@ public class DownloadFileUtils {
             // 指定文件名称(有需求可以自定义)
             documentName = documentName + "." + documentType;
             // 指定存放位置(有需求可以自定义)
-            String path = "D://新建文件夹 (2)" + File.separator + fileName + File.separatorChar + documentName;
+            String path = "D://中城投资文件" + File.separator + fileName + File.separatorChar + documentName;
             file = new File(path);
             // 校验文件夹目录是否存在，不存在就创建一个目录
             if (!file.getParentFile().exists()) {
