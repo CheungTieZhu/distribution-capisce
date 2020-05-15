@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.capisce.implement.dao.NetValueDao">
+    <insert id="insertBatch" parameterType="com.capisce.entity.NetValueEntity">
+        insert capisce_net_value (netDate, fundCode, netValue, createTime, updateTime)
+        values
+        <foreach collection="list" item="item" separator=",">
+         (#{item.netDate},#{item.fundCode},#{item.netValue},now(),now())
+        </foreach>
+    </insert>
+
+    <select id="getNetValueSample" parameterType="com.capisce.entity.SelectPageEntity" resultType="com.capisce.entity.NetValueEntity">
+        select * from capisce_net_value where fundCode = #{fundCode}
+        and netDate <![CDATA[ >= ]]> #{beginDate}
+        and netDate <![CDATA[ <= ]]> #{endDate}
+        order by netDate desc
+        limit #{beginIndex},#{row}
+    </select>
+</mapper>
