@@ -8,13 +8,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import javax.annotation.Resource;
+
 /**
  * @author zhangxb
  */
 @Service(version = "1.0.0", interfaceClass = IUserService.class, timeout = 15000)
 @Component
 public class UserServiceImpl implements IUserService {
-    @Autowired
+
+    @Resource
     private UserDao userDao;
 
     @Override
