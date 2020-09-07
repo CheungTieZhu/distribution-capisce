@@ -88,7 +88,7 @@ public class ExcelExportUtils {
             row = sheet.getRow(0);
             //获取最大列数
             int colnum = row.getPhysicalNumberOfCells();
-            for (int i = 1; i<rownum; i++) {
+            for (int i = 0; i<rownum; i++) {
                 ExcelInfoEntity excelInfoEntity = new ExcelInfoEntity();
                 row = sheet.getRow(i);
                 if(row !=null){
@@ -109,8 +109,11 @@ public class ExcelExportUtils {
                                 }
                                 excelInfoEntity.setDocumentName(cellData);
                                 break;
-                            default:
+                            case 2:
                                 excelInfoEntity.setUrl(cellData);
+                                break;
+                            default:
+                                break;
                         }
                     }
                 }else{
@@ -125,7 +128,7 @@ public class ExcelExportUtils {
     public static void main(String[] args) {
         Workbook wb =null;
         List<ExcelInfoEntity> list = null;
-        String filePath = "D:\\报表-中城拉取电子签约文件数据-20200512.xlsx";
+        String filePath = "C:\\Users\\admin\\Desktop\\报表-拉取电子签约文件数据20200831.xls";
         wb = readExcel(filePath);
         //遍历解析出来的list
         list = convertExcelToList(wb);
