@@ -17,7 +17,7 @@
         <springloaded.version>1.2.8.RELEASE</springloaded.version>
         <spring-boot-devtools.version>2.2.5.RELEASE</spring-boot-devtools.version>
         <spring-boot-starter-jdbc.version>2.2.5.RELEASE</spring-boot-starter-jdbc.version>
-        <zookeeper.version>3.4.9</zookeeper.version>
+        <zookeeper.version>3.4.14</zookeeper.version>
     </properties>
 
     <dependencies>
